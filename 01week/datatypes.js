@@ -96,5 +96,6 @@ const notTrueFunction = (arg1, arg2) => {
     if (arg1 && arg2 != true) {
         return 'both are false'
      } 
+     
     }
     notTrueFunction(0,0);
