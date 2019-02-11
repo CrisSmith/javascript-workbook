@@ -1,0 +1,17 @@
+{
+  "name": "05week",
+  "version": "1.0.0",
+  "description": "simple app for testing",
+  "main": "spaceTravelToMars.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^5.2.0"
+  }
+}
