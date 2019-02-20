@@ -2,25 +2,40 @@
 
 const assert = require('assert');
 
-function forEach(arr, callback) {
-  // Your code here
+//Create a forEach() function that takes an array of items and a function that runs the function arr.length number of times.
+let countMembers=()=> {
+  let cast =["Daryl", "Rick", "Caryl", "Negan"];
+  let count = 0;
+  cast.forEach((member)=>{
+    return count++
+  });
 }
+  
+ //Create a map() function that takes an array of items and a function that returns an array with each item manipulated by that function. 
+let fruits = ["apple", "orange", "cherry", "mellon"];
+let manipulated = fruits.map((fruit) => {
+  return fruit + " smoothy"
+});
 
-function map(arr, callback) {
-  // Your code here
-}
+//Create a filter() function that takes an array of items and a function that returns an array with only the items that return true in the function.
+let nums =[50, 60, 100, 7, 111];
+let filtered = nums.filter((num)=> {
+  return num % 10 === 0
+});
 
-function filter(arr, callback) {
-  // Your code here
-}
+//Create a some() function that takes an array of items and a function that returns true or false if any of the items return true in the function.
+let ages = [40,14,23,39,20,15]
+let canSomeDrink = ages.some((age)=> {
+   return age > 21
+});
 
-function some(arr, callback) {
-  // Your code here
-}
+//Create an every() function that takes an array of items and a function that returns true or false if all of the items return true in the function.
+let avengers = ["Thor", "Ironman", "Hawkeye", "Hulk", "Cap"] 
+let areAllThor = avengers.every((avenger)=> {
+  return avenger === "Thor"
+});
 
-function every(arr, callback) {
-  // Your code here
-}
+///tests
 
 if (typeof describe === 'function') {
 
