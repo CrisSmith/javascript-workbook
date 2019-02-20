@@ -1,54 +1,13 @@
-'use strict';
+let assert = require("assert");
+let {CrewMember, Ship} = require('../spaceTravelToMars');
+//let crewMember = new CrewMember("jess")
+//let newShip = new Ship();
 
-//let assert = require('assert');
-
-let jobTypes = {
-  pilot: 'MAV',
-  mechanic: 'Repair Ship',
-  commander: 'Main Ship',
-  programmer: 'Any Ship!'
-}
-
-// Your code here
-class CrewMember {
-  constructor(name, job, specialSkill, ship){
-  this.name = name;
-  this.job= job;
-  this.specialSkill =specialSkill
-  this.ship = null;
-  }
-  enterShip(ship){
-    this.ship = ship;
-    ///pushes the crewMember object (refered to via 'this'), into the given ship's crew array:
-    ship.crew.push(this);
-  } 
-}
-
-class Ship {
-  constructor(name, type, ability, crew = 0 ){
-    this.name = name;
-    this.type= type;
-    this.ability = ability;
-    ///sets the value of a ship's crew to an array where crewMembers can be pushed into it when enterShip() is called
-    this.crew = [];
-  }
-  missionStatement() {
-    if( this.crew.length > 0){
-    return this.ability;
-    }
-    else return "Can't perform a mission yet."
-  } 
-}
-//// new instances
-let crewMember1 = new CrewMember('Rick Martinez', 'pilot', 'chemistry')
-let crewMember2 = new CrewMember('Commander Lewis', 'commander', 'geology');
-let mav = new Ship('Mars Ascent Vehicle', 'MAV', 'Ascend into low orbit');
-let hermes = new Ship('Hermes', 'Main Ship', 'Interplanetary Space Travel');
+//console.log(newShip)
+//console.log(crewMember.name)
 
 
-//tests
-/*if (typeof describe === 'function'){
-  describe('CrewMember', function(){
+describe('CrewMember', function(){
     it('should have a name, a job, a specialSkill and ship upon instantiation', function(){
       var crewMember1 = new CrewMember('Rick Martinez', 'pilot', 'chemistry');
       assert.equal(crewMember1.name, 'Rick Martinez');
@@ -91,7 +50,3 @@ let hermes = new Ship('Hermes', 'Main Ship', 'Interplanetary Space Travel');
       assert.equal(hermes.missionStatement(), "Interplanetary Space Travel");
     });
   });
-}*/
-
-
-module.exports = {CrewMember, Ship}
