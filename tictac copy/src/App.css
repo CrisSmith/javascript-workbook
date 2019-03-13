@@ -1,0 +1,38 @@
+
+body {
+  background: rgb(202, 230, 248);
+  text-align: center;
+}
+
+.game-board{
+  display: flex;
+  justify-content: center;
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  border: 1px solid #999;
+  font-size: 30px;
+  line-height: 34px;
+  font-weight: bold;
+  height: 100px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 100px;
+  float: left;
+}
+
+.square:hover {
+  background: rgb(139, 200, 241);
+}
+.status-bar {
+  margin: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
